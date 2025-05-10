@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JS Learning Blocks</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1 class="main-title">JavaScript Learning Blocks</h1>
+  <div class="container">
+    <!-- 13 blocks -->
+    <div class="block" id="block1">
+      <h2>Alert Buttons</h2>
+      <button class="btn success" onclick="showAlert('success')">Success</button>
+      <button class="btn danger" onclick="showAlert('danger')">Danger</button>
+      <button class="btn info" onclick="showAlert('info')">Info</button>
+      <button class="btn warning" onclick="showAlert('warning')">Warning</button>
+    </div>
+
+    <div class="block" id="block2">
+      <h2>Add / Subtract</h2>
+      <input type="number" id="num1" placeholder="Number 1">
+      <input type="number" id="num2" placeholder="Number 2">
+      <button onclick="addNumbers()">Add</button>
+      <button onclick="subtractNumbers()">Subtract</button>
+      <p id="result1"></p>
+    </div>
+
+    <div class="block" id="block3">
+      <h2>Multiply / Divide</h2>
+      <input type="number" id="num3" placeholder="Number 1">
+      <input type="number" id="num4" placeholder="Number 2">
+      <button onclick="multiply()">Multiply</button>
+      <button onclick="divide()">Divide</button>
+      <p id="result2"></p>
+    </div>
+
+    <div class="block" id="block4">
+      <h2>Odd, Even, Prime, Composite</h2>
+      <input type="number" id="checkNum" placeholder="Enter Number">
+      <button onclick="checkNumber()">Check</button>
+      <p id="result3"></p>
+    </div>
+
+    <div class="block" id="block5">
+      <h2>Voting Eligibility</h2>
+      <input type="number" id="age" placeholder="Enter Age">
+      <button onclick="checkEligibility()">Check</button>
+      <p id="result4"></p>
+    </div>
+
+    <div class="block" id="gradeCalculator">
+        <h3>Grade Calculator</h3>
+        <button onclick="calculateCGPA()">Calculate CGPA</button>
+        <pre id="gradeOutput"></pre>
+    </div>
+    
+    
+
+    <div class="block" id="block7">
+      <h2>Invoice Calculator</h2>
+      <input type="text" id="name" placeholder="Name" />
+      <input type="text" id="contact" placeholder="Contact No" />
+      <input type="number" id="price" placeholder="Total Price" />
+      <input type="number" id="discount" placeholder="Discount %" />
+      <input type="number" id="cgst" placeholder="CGST %" />
+      <input type="number" id="sgst" placeholder="SGST %" />
+      <button onclick="calculateInvoice()">Get Invoice</button>
+      <p id="invoiceOutput"></p>
+    </div>
+
+    <div class="block" id="block8">
+      <h2>Event Handling</h2>
+      <button onclick="handleEvent(this)">Click Me</button>
+      <button ondblclick="handleDoubleClick()">Double Click Me</button>
+      <div onmouseover="hoverEvent()" style="margin-top: 10px;">Hover over me!</div>
+      <p id="eventOutput"></p>
+    </div>
+
+    <div class="block" id="block9">
+      <h2>User Form</h2>
+      <form onsubmit="handleForm(event)">
+        <input type="text" id="username" placeholder="Enter Name" required />
+        <input type="email" id="useremail" placeholder="Enter Email" required />
+        <button type="submit">Submit</button>
+      </form>
+      <p id="formOutput"></p>
+    </div>
+
+    <div class="block" id="block10">
+      <h2>DOM Manipulation</h2>
+      <button onclick="changeText()">Change Text Below</button>
+      <p id="domText">Original Text</p>
+    </div>
+
+    <div class="block" id="block11">
+      <h2>Local & Session Storage</h2>
+      <input type="text" id="storageData" placeholder="Enter Something" />
+      <button onclick="saveToLocal()">Save to Local</button>
+      <button onclick="saveToSession()">Save to Session</button>
+    </div>
+
+    <div class="block" id="block12">
+        <h2>Bulb Color Toggle</h2>
+        <div class="bulb" id="bulb"></div>
+        <button onclick="toggleBulb()">Change colour</button>
+      </div>
+    
+    <div class="block" id="colorMixer">
+        <h3>Color Mixer</h3>
+        <div class="slider-group">
+            <label>Red <input type="range" id="red" min="0" max="255" oninput="updateColor()"></label>
+            <label>Green <input type="range" id="green" min="0" max="255" oninput="updateColor()"></label>
+            <label>Blue <input type="range" id="blue" min="0" max="255" oninput="updateColor()"></label>
+        </div>
+        <div id="colorPreview" class="color-box"></div>
+        <p id="rgbValue" class="color-info"></p>
+        <p id="hexValue" class="color-info"></p>
+    </div>
+    
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
